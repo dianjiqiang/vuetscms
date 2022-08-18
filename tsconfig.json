@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    // 目标代码 ts-> js(es5,6,7,8,9...)
+    "target": "esnext",
+    // 为类字段使用默认配置 true
+    "useDefineForClassFields": true,
+    // 目标代码需要使用的模块化方案  amd 就是 既支持es规范又支持commonJS规范
+    "module": "amd",
+    // 按照node 的方式去解析我们的模块
+    "moduleResolution": "node",
+    //启用严格的检查
+    "strict": true,
+    // 对JSX进行怎样的处理
+    "jsx": "preserve",
+    // 要不要生成我们的映射文件 (ts -> js)
+    "sourceMap": true,
+    //解析json模块
+    "resolveJsonModule": true,
+    //es module 和 commonjs
+    "esModuleInterop": true,
+    //可以指定在项目中可以使用哪里库的类型
+    "lib": ["esnext", "dom"],
+    "paths": {
+      "@": ["./src/*"],
+      "utils": ["./src/utils"],
+    }
+  },
+  //我们应用的是什么方式 解析什么代码
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"]
+}
